@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar.jsx";
@@ -23,12 +24,7 @@ const Homepage = () => {
           <LeftMainSideBar />
         </div>
         <div className="contains-main">
-          <div className="day-table">
-            <DayTable />
-          </div>
-          <div className="att-table">
-            <AttTable />
-          </div>
+          <Outlet />
         </div>
       </div>
     </div>

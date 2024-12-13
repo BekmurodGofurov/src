@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import "./LeftMainSideBar.scss";
 
+const btnList = [
+  { name: "Home", page: "/" },
+  { name: "Time-Table", page: "/time-table" },
+  { name: "Students List", page: "/students-list" },
+];
+
 const LeftMainSideBar = () => {
   const [user, setUser] = useState(null);
 
@@ -16,8 +22,22 @@ const LeftMainSideBar = () => {
   return (
     <div className="left-main-side-bar">
       <div className="user-info">
-        <h1>{user?.name}</h1>
-        <h2>{user?.surname}</h2>
+        <h1>Bekmurod</h1>
+        <h2>G'ofurov</h2>
+      </div>
+      <br />
+      <div className="nav-btn">
+        {btnList.map((i) => (
+          <a href={i.page}>
+            <button
+              className="nav-btn"
+              page-link={i.page}
+              key={i.name}
+            >
+              {i.name}
+            </button>
+          </a>
+        ))}
       </div>
     </div>
   );
