@@ -1,0 +1,26 @@
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+
+  .contains-content {
+    display: flex;
+    margin: 10px;
+
+    .contains-left-side-bar {
+      display: flex;
+      flex: 1;
+      max-width: 200px;
+      justify-content: center;
+    }
+
+    .contains-main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 2;
+      margin-left: 40px;
+      justify-content: left;
+      align-items: center;
+    }
+  }
+}

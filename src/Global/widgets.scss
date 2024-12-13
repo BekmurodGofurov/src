@@ -1,0 +1,78 @@
+@use "variables.scss";
+////////////////ERROR///////////////////
+.error {
+  color: red;
+}
+
+////////////////ROUND INPUT///////////////////
+.round-input {
+  border: 1px solid variables.$outline-one;
+  border-radius: 100px;
+  padding: 10px;
+  font-size: 14px;
+  outline: 0;
+  transition: all 0ms;
+
+  &:focus {
+    border: 1px solid variables.$active;
+    border-radius: 100px;
+    background-color: variables.$contra-background;
+  }
+
+  &:active {
+    background-color: variables.$contra-background;
+  }
+}
+
+////////////////ROUND BUTTON///////////////////
+.round-button {
+  border: 0;
+  border-radius: 100px;
+  padding: 10px;
+  font-size: 14px;
+  outline: 0;
+  color: variables.$text-color;
+  background-color: variables.$contra-background;
+
+  &:hover {
+    background-color: variables.$pre-active;
+  }
+
+  &:active {
+    background-color: variables.$active;
+  }
+}
+
+/////////////////BRAND NAME//////////////////////////
+.brand-name {
+  display: flex;
+  font-size: 32px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: variables.$active;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  cursor: pointer;
+}
+
+////////////// LINE HORIZONTAL 1px ////////////////
+.line-horizontal-1px {
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: variables.$outline-one;
+}
+
+////////////// LINE VERTICAL 1px ////////////////
+.line-vertical-1px {
+  display: flex;
+  height: 100%;
+  width: 1px;
+  background-color: variables.$outline-one;
+}
+
+/////////////// TIME /////////////////////////////
+.time {
+  font-size: 16px;
+}

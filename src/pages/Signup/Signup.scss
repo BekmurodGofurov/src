@@ -1,0 +1,50 @@
+@use "../../Global/variables.scss";
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30vh;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: variables.$active;
+    font-size: 16px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+
+    .inputs {
+      position: relative;
+      p {
+        position: absolute;
+        font-size: 10px;
+        margin-left: 15px;
+        margin-top: -8px;
+        padding: 0.2px 2px;
+        border-radius: 5px;
+      }
+      input {
+        min-width: 300px;
+      }
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    width: 150px;
+  }
+
+  .suggestion {
+    margin-top: 10px;
+    font-size: 8px;
+
+    a {
+      color: variables.$active;
+    }
+  }
+}

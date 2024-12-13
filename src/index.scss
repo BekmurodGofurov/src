@@ -1,0 +1,12 @@
+@use "Global/variables.scss";
+@use "Global/widgets.scss";
+html,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: variables.$text-color;
+  font-family: Helvetica, sans-serif;
+  background-color: variables.$background;
+  transition: all 200ms ease-out;
+}
