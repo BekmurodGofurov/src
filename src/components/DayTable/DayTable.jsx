@@ -14,23 +14,25 @@ const DayTable = () => {
         <div className="table-line-header-container">
           <h3>Today: Mondey</h3>
           <table className="subject-table">
-        <thead>
-          <tr>
-            <th>Order</th>
-            <th>Subject Name</th>
-            <th>Start-End</th>
-          </tr>
-        </thead>
-        <tbody>
-          {subjects.map((subject) => (
-            <tr key={subject.order}>
-              <td>{subject.order}</td>
-              <td>{subject.name}</td>
-              <td>«{subject.starts}-{subject.ends}»</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Subject</th>
+                <th>Start-End</th>
+              </tr>
+            </thead>
+            <tbody>
+              {subjects.map((subject) => (
+                <tr key={subject.order}>
+                  <td>{subject.order}</td>
+                  <td>{subject.name}</td>
+                  <td>
+                    «{subject.starts}-{subject.ends}»
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

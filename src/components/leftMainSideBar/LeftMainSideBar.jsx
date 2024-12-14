@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./LeftMainSideBar.scss";
 
 const btnList = [
@@ -28,15 +29,9 @@ const LeftMainSideBar = () => {
       <br />
       <div className="nav-btn">
         {btnList.map((i) => (
-          <a href={i.page}>
-            <button
-              className="nav-btn"
-              page-link={i.page}
-              key={i.name}
-            >
-              {i.name}
-            </button>
-          </a>
+          <Link to={i.page} key={i.name}>
+            <button className="nav-btn">{i.name}</button>
+          </Link>
         ))}
       </div>
     </div>
