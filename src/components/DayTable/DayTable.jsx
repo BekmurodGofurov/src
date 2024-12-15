@@ -17,7 +17,7 @@ const DayTable = () => {
             <thead>
               <tr>
                 <th>№</th>
-                <th>Subject</th>
+                <th>Subjects</th>
                 <th>Start-End</th>
               </tr>
             </thead>

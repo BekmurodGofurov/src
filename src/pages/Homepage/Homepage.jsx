@@ -8,9 +8,10 @@ import AttTable from "../../components/AttTable/AttTable.jsx";
 import DayTable from "../../components/DayTable/DayTable.jsx";
 import "./Homepage.scss";
 
+
+
 const Homepage = () => {
-
-
+  
   const navigate = useNavigate
   return (
     <div className="home-page-container">
@@ -22,7 +23,7 @@ const Homepage = () => {
       <div className="contains-content">
         <div className="contains-left-side-bar">
           <LeftMainSideBar />
-        </div>
+        </div> 
         <div className="contains-main">
           <Outlet />
         </div>

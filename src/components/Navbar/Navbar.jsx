@@ -1,4 +1,5 @@
 import "./Navbar.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   let cTime = new Date().toString();
@@ -11,9 +12,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <a href="/">
+      <Link to='/'>
         <div className="brand-name">AttendMe</div>
-      </a>
+      </Link>
       <p className="time navbar-time">{currentTime}</p>
     </div>
   );

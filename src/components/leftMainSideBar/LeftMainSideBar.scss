@@ -1,49 +1,125 @@
 @use "../../Global/variables.scss";
-
-.left-main-side-bar {
-  padding: 10px;
-  width: 100%;
-  height: 100vh;
-  border-right: 2px solid #555;;
-  /* Ichki chekka uchun joy qo'shildi */
-
-  .user-info {
+.sidebarContainer{
+  .left-main-side-bar {
+    padding: 10px;
+    width: 250px;
+    height: 100vh;
+    border-right: 2px solid #555;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
 
-  .nav-btn {
-    display: flex;
-    flex-direction: column;
-    /* Tugmalarni vertikal joylash */
-    gap: 10px;
-    /* Tugmalar orasidagi masofa */
-  }
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
 
-  button {
+      .user-icon {
+        font-size: 50px;
+      }
+
+      .user-name {
+        margin-top: 10px;
+        text-align: center;
+
+        h1 {
+          font-size: 18px;
+          margin: 0;
+        }
+
+        h2 {
+          font-size: 16px;
+          margin: 0;
+          color: variables.$text-color;
+        }
+      }
+    }
+
+    .nav-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 18px;
+
+      span {
+        width: 100%;
+        padding: 5px 15px;
+        background-color: variables.$contra-background;
+        color: variables.$text-color;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 5px;
+        text-align: left;
+    
+        &:hover {
+          background-color: variables.$pre-active;
+        }
+    
+        &:active {
+          background-color: variables.$active;
+        }
+      }
+      
+      .icon {
+        display: none;
+        font-size: 24px;
+      }
+    
+      .text {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    
+      a {
+        text-decoration: none;
+      }
+    }
+    
+    }
+  /* Mobil dizayn */
+@media screen and (max-width: 768px) {
+  .left-main-side-bar {
+    padding: 0;
     width: 100%;
-    padding: 5px 15px;
-    background-color: variables.$contra-background;
-    color: variables.$text-color;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 5px;
+    height: 60px;
+    border-right: none;
+    border-top: 2px solid #555;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 
-    &:hover {
-      background-color: variables.$pre-active;
+    .user-info {
+      display: none; // Mobilda user ma'lumotlarini yashirish
     }
 
-    &:active {
-      background-color: variables.$active;
+    .nav-btn {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+
+      span {
+        display: flex;
+        flex-direction: column; // Icon va text vertical joylashadi
+        align-items: center;
+        gap: 5px;
+        background: none; // Tugma fonini yo'q qilish
+        border: none; // Tugma chegarasini yo'q qilish
+        cursor: pointer;
+
+        
+      }
+      .icon {
+        display: block; // Icon ko'rinadi
+        font-size: 24px; // Iconning kattaligi
+        color: variables.$text-color;
+      }
+
+      .text {
+        display: none; // Textni yashirish
+      }
     }
   }
-
-
-
-
-  a {
-    text-decoration: none;
-  }
+}
 }
