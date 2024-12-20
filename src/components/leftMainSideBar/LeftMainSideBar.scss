@@ -113,6 +113,7 @@
           display: flex;
           justify-content: space-between;
           background-color: transparent;
+ 
         }
 
         span {
@@ -127,14 +128,19 @@
           cursor: pointer;
           svg {
             background-color: variables.$contra-background-weak !important;
+            &:active{   
+            fill: variables.$active;
+            font-size: 24px;
+            }
+
           }
         }
 
         .icon {
           background: transparent;
           display: flex;
-          font-size: 34px;
-          color: variables.$text-color;
+          font-size: 28px;
+          
 
         }
 

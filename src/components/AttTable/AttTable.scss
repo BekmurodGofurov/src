@@ -7,23 +7,102 @@
   background-color: variables.$outline-one;
   padding: 1px;
 
-  .data-container {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
+  
+  @media screen and (min-width: 768px) {
+    .data-container {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
 
+      .table-line-container {
+        display: flex;
+        background-color: variables.$outline-one;
+
+        .line-name {
+          width: 220px;
+        }
+        .line-surname {
+          width: 220px;
+        }
+        .number {
+          width: 30px;
+        }
+
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin: 1px;
+          padding: 3px;
+          font-size: 22px;
+          border-radius: 1px;
+        }
+        .checks {
+          display: flex;
+          font-size: 22px;
+          width: 50px;
+          overflow: hidden;
+        }
+        &:hover {
+          background-color: variables.$active;
+        }
+      }
+
+      .table-line-header-container {
+        display: flex;
+        background-color: variables.$outline-one;
+
+        .line-name {
+          width: 220px;
+        }
+        .line-surname {
+          width: 220px;
+        }
+        .number {
+          width: 30px;
+        }
+
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin: 1px;
+          padding: 3px;
+          font-size: 22px;
+          border-radius: 1px;
+          background-color: variables.$contra-background;
+        }
+
+        .week-day {
+          display: flex;
+          width: 50px;
+          font-size: 22px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .data-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    
     .table-line-container {
       display: flex;
       background-color: variables.$outline-one;
 
       .line-name {
-        width: 220px;
+        width: 70px;
       }
       .line-surname {
-        width: 220px;
+        width: 70px;
       }
       .number {
-        width: 30px;
+        width: 20px;
       }
 
       p {
@@ -33,13 +112,13 @@
         text-align: center;
         margin: 1px;
         padding: 3px;
-        font-size: 22px;
+        font-size: 16px;
         border-radius: 1px;
       }
       .checks {
         display: flex;
-        font-size: 22px;
-        width: 50px;
+        font-size: 14px;
+        width: 30px;
         overflow: hidden;
       }
       &:hover {
@@ -52,13 +131,13 @@
       background-color: variables.$outline-one;
 
       .line-name {
-        width: 220px;
+        width: 20%;
       }
       .line-surname {
-        width: 220px;
+        width: 20%;
       }
       .number {
-        width: 30px;
+        width: 5%;
       }
 
       p {
@@ -68,17 +147,19 @@
         text-align: center;
         margin: 1px;
         padding: 3px;
-        font-size: 22px;
+        font-size: 14px;
         border-radius: 1px;
         background-color: variables.$contra-background;
       }
 
       .week-day {
         display: flex;
-        width: 50px;
-        font-size: 22px;
+        width: 11%;
+        font-size: 14px;
         overflow: hidden;
       }
     }
   }
 }
+}
+

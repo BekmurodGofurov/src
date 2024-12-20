@@ -64,7 +64,7 @@ const AttTable = () => {
         {groupMates?.map((i) => (
           <div className="table-line-container" key={n++} id={i?.name}>
             <p className="number">{n}</p>
-            <p className="line-name">{i.name}</p>
+            <p className="line-name">{i.name} </p>
             <p className="line-surname">{i.surname}</p>
             <p className="checks"></p>
             <p className="checks"></p>
