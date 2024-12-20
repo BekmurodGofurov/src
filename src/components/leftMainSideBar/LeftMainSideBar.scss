@@ -1,125 +1,148 @@
 @use "../../Global/variables.scss";
-.sidebarContainer{
-  .left-main-side-bar {
-    padding: 10px;
-    width: 250px;
-    height: 100vh;
-    border-right: 2px solid #555;
-    display: flex;
-    flex-direction: column;
 
-    .user-info {
+.sidebarContainer {
+  @media screen and (min-width: 768px) {
+    .left-main-side-bar {
+      padding: 10px;
+      width: 250px;
+      height: 100vh;
+      border-right: 2px solid #555;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
 
-      .user-icon {
-        font-size: 50px;
-      }
-
-      .user-name {
-        margin-top: 10px;
-        text-align: center;
-
-        h1 {
-          font-size: 18px;
-          margin: 0;
-        }
-
-        h2 {
-          font-size: 16px;
-          margin: 0;
-          color: variables.$text-color;
-        }
-      }
-    }
-
-    .nav-btn {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding-left: 18px;
-
-      span {
-        width: 100%;
-        padding: 5px 15px;
-        background-color: variables.$contra-background;
-        color: variables.$text-color;
-        border: none;
-        cursor: pointer;
-        font-size: 20px;
-        border-radius: 5px;
-        text-align: left;
-    
-        &:hover {
-          background-color: variables.$pre-active;
-        }
-    
-        &:active {
-          background-color: variables.$active;
-        }
-      }
-      
-      .icon {
-        display: none;
-        font-size: 24px;
-      }
-    
-      .text {
-        display: block;
-        font-size: 16px;
-        font-weight: 500;
-      }
-    
-      a {
-        text-decoration: none;
-      }
-    }
-    
-    }
-  /* Mobil dizayn */
-@media screen and (max-width: 768px) {
-  .left-main-side-bar {
-    padding: 0;
-    width: 100%;
-    height: 60px;
-    border-right: none;
-    border-top: 2px solid #555;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-
-    .user-info {
-      display: none; // Mobilda user ma'lumotlarini yashirish
-    }
-
-    .nav-btn {
-      flex-direction: row;
-      width: 100%;
-      justify-content: space-around;
-
-      span {
+      .user-info {
         display: flex;
-        flex-direction: column; // Icon va text vertical joylashadi
+        flex-direction: column;
         align-items: center;
-        gap: 5px;
-        background: none; // Tugma fonini yo'q qilish
-        border: none; // Tugma chegarasini yo'q qilish
-        cursor: pointer;
+        margin-bottom: 20px;
 
-        
-      }
-      .icon {
-        display: block; // Icon ko'rinadi
-        font-size: 24px; // Iconning kattaligi
-        color: variables.$text-color;
+        .user-icon {
+          font-size: 50px;
+        }
+
+        .user-name {
+          margin-top: 10px;
+          text-align: center;
+
+          h1 {
+            font-size: 18px;
+            margin: 0;
+          }
+
+          h2 {
+            font-size: 16px;
+            margin: 0;
+            color: variables.$text-color;
+          }
+        }
       }
 
-      .text {
-        display: none; // Textni yashirish
+      .nav-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 18px;
+
+        span {
+          width: 100%;
+          padding: 5px 15px;
+          background-color: variables.$contra-background;
+          color: variables.$text-color;
+          border: none;
+          cursor: pointer;
+          font-size: 20px;
+          border-radius: 5px;
+          text-align: left;
+
+          &:hover {
+            background-color: variables.$pre-active;
+          }
+
+          &:active {
+            background-color: variables.$active;
+          }
+        }
+
+        .icon {
+          display: none;
+          font-size: 24px;
+        }
+
+        .text {
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        a {
+          text-decoration: none;
+        }
       }
     }
   }
-}
+
+  /* Mobil dizayn */
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 30px;
+    background-color: variables.$contra-background-weak;
+    .left-main-side-bar {
+      background-color: transparent;
+      padding: 0;
+      width: 100% !important;
+      height: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center !important;
+      justify-content: space-between !important;
+
+      .user-info {
+        display: none;
+      }
+
+      .nav-btn {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: transparent;
+        justify-content: space-between;
+        /* Ikonalarni teng masofada joylashtirish */
+
+        Link {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          background-color: transparent;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-grow: 1;
+          gap: 50px;
+          // text-align: center;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          svg {
+            background-color: variables.$contra-background-weak !important;
+          }
+        }
+
+        .icon {
+          background: transparent;
+          display: flex;
+          font-size: 34px;
+          color: variables.$text-color;
+
+        }
+
+        .text {
+          display: none;
+          /* Textni yashirish */
+        }
+      }
+    }
+  }
 }
