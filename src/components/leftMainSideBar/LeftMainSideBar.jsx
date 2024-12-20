@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaHome, FaCalendarAlt, FaUser } from "react-icons/fa"; // Ikonkalar
+import { FaUsers } from "react-icons/fa";
 import "./LeftMainSideBar.scss";
 
 const btnList = [
   { name: "Home", page: "/", icon: <FaHome /> },
   { name: "Time-Table", page: "/time-table", icon: <FaCalendarAlt /> },
-  { name: "Group List", page: "/students-list", icon: <FaUser /> },
+  { name: "Group List", page: "/students-list", icon: <FaUsers /> },
 ];
 
 const LeftMainSideBar = () => {

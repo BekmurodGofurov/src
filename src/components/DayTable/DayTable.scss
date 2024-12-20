@@ -1,6 +1,9 @@
+
 @use "../../Global/variables.scss";
 
 .day-table-container {
+  @media screen and (min-width: 768px){
+  .data-container{
   display: flex;
   margin: 50px auto;
   padding: 10px;
@@ -30,4 +33,39 @@
     .subject-table th {
       background-color: variables.$contra-background;
     }
+}
+  }
+@media screen and (max-width: 768px){
+  .data-container {
+    width: 100%;
+    // display: flex;
+    margin: 50px auto;
+    padding: 10px;
+    max-width: 800px;
+    border-radius: 8px;
+    color: variables.$text-color;
+    h3{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    
+  }
+ 
+    .subject-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    .subject-table th,
+    .subject-table td {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+  
+    .subject-table th {
+      background-color: variables.$contra-background;
+    }
+}
+}
 }
