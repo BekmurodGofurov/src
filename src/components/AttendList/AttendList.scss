@@ -1,0 +1,14 @@
+.att-subjects-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 100%;
+
+    .buttons-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        grid-template-columns: 2;
+        grid-template-rows: 4;
+    }
+}

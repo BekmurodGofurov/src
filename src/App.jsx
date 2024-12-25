@@ -6,11 +6,12 @@ import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Signup/Signup.jsx";
 import Homepage from "./pages/Homepage/Homepage.jsx";
 import DayTable from "./components/DayTable/DayTable.jsx";
-import AttTable from "./components/AttTable/AttTable.jsx";
+import GroupList from "./components/GroupList/GroupLIst.jsx";
+import AttendList from "./components/AttendList/AttendList.jsx";
 import Home from "./components/Home/Home.jsx";
 
 const router = createBrowserRouter([
- {
+  {
     path: "/",
     element: <Homepage />,
     errorElement: <>404 not found</>,
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
       },
       {
         path: "students-list",
-        element: <AttTable />,
+        element: <GroupList />,
+      },
+      {
+        path: "attendes-list",
+        element: <AttendList />,
       },
     ],
   },

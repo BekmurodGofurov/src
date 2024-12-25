@@ -1,0 +1,24 @@
+@use "../../Global/variables.scss";
+.subject-button-container {
+    display: flex;
+    background-color: variables.$contra-background-weak;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+
+    &:hover{
+        background-color: variables.$pre-active;
+        font-size: 23px;
+    }
+
+    &:active {
+        background-color: variables.$active;
+        color: variables.$background;
+    }
+}
+
